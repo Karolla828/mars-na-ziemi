@@ -96,8 +96,8 @@ def select_places(ranking):
 st.title("🪐 Mars na Ziemi")
 
 st.write(
-    "Porównaj fragment Jezero z terenami Atakamy "
-    "i Kotliny Tunkińskiej na Syberii."
+    "Porównaj fragment Jezero z terenami Atakamy, "
+    "Kotliny Tunkińskiej na Syberii i Kapadocji w Turcji."
 )
 
 if not AREAS_FILE.exists() or not METHOD_FILE.exists():
@@ -122,7 +122,7 @@ st.selectbox(
 st.caption(
     "Porównywane fragmenty mają około 11,3 × 11,9 km. "
     "Wyszukiwanie obejmuje przygotowane fragmenty "
-    "Atakamy i Kotliny Tunkińskiej."
+    "Atakamy, Kotliny Tunkińskiej i Kapadocji."
 )
 
 st.header("2. Wybierz kryteria podobieństwa")
@@ -271,7 +271,7 @@ if results:
     if "water_score" in active:
         st.info(
             "Wyszukiwanie obejmuje tylko Atakamę. "
-            "Syberia nie ma przygotowanych danych śladów wody. "
+            "Syberia i Turcja nie mają przygotowanych danych śladów wody. "
             "Odznacz tę kategorię, aby porównać oba regiony."
         )
 
@@ -410,15 +410,16 @@ st_folium(
 
 with st.expander("Źródła danych i sposób liczenia"):
     st.write(
-        "Obszary Ziemi: przygotowane fragmenty Atakamy "
-        "i Kotliny Tunkińskiej, 51–52°N oraz 102–103°E. "
+        "Obszary Ziemi: przygotowane fragmenty Atakamy, "
+        "Kotliny Tunkińskiej (51–52°N, 102–103°E) "
+        "i Kapadocji (38–39°N, 34–35°E). "
         "Wzorzec Marsa: wybrany fragment Jezero."
     )
 
     st.write(
         "Rzeźba: model CTX/USGS z danych NASA MRO dla Marsa "
         "oraz Terrain Tiles dla Ziemi. Siatka analizy 100 m. "
-        "Wspólne skale różnic obliczono z obu regionów Ziemi. "
+        "Wspólne skale różnic obliczono ze wszystkich trzech regionów Ziemi. "
         "Nachylenie, przewyższenia i nierówność mają "
         "wagi wewnętrzne 40/30/30."
     )
