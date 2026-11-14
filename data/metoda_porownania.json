@@ -1,0 +1,25 @@
+{
+  "terrain_columns": [
+    "slope_mean_deg",
+    "relief_p95_p05_m",
+    "roughness_plane_m"
+  ],
+  "terrain_scales": [
+    11.144036137532929,
+    401.20834960937464,
+    116.38494444819224
+  ],
+  "terrain_component_weights": [
+    0.4,
+    0.3,
+    0.3
+  ],
+  "temperature_scale_c": 20.0,
+  "water_fraction_scale": 0.2,
+  "mars_material_coverage_percent": 36.53603034134007,
+  "mars_water_percent": 17.79843808107103,
+  "regions": [
+    "atacama",
+    "syberia"
+  ]
+}
