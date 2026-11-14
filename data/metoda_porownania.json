@@ -5,9 +5,9 @@
     "roughness_plane_m"
   ],
   "terrain_scales": [
-    11.144036137532929,
-    401.20834960937464,
-    116.38494444819224
+    7.379967391385589,
+    410.44537658691394,
+    99.70088810418794
   ],
   "terrain_component_weights": [
     0.4,
@@ -20,6 +20,7 @@
   "mars_water_percent": 17.79843808107103,
   "regions": [
     "atacama",
-    "syberia"
+    "syberia",
+    "turcja"
   ]
 }
