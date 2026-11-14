@@ -1,0 +1,10 @@
+{
+  "source": "mars_100m.tif",
+  "window_width_pixels": 113,
+  "window_height_pixels": 119,
+  "pixel_size_m": 100.0,
+  "slope_mean_deg": 6.319428995463795,
+  "relief_p95_p05_m": 728.2629760742186,
+  "roughness_plane_m": 114.19052213808541,
+  "coverage_percent": 100.0
+}
