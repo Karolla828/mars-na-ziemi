@@ -5,9 +5,9 @@
     "roughness_plane_m"
   ],
   "terrain_scales": [
-    7.379967391385589,
-    410.44537658691394,
-    99.70088810418794
+    6.739017129262429,
+    385.63916015625017,
+    85.0370436016452
   ],
   "terrain_component_weights": [
     0.4,
@@ -21,6 +21,7 @@
   "regions": [
     "atacama",
     "syberia",
-    "turcja"
+    "turcja",
+    "hanksville"
   ]
 }
