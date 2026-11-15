@@ -97,7 +97,7 @@ st.title("🪐 Mars na Ziemi")
 
 st.write(
     "Porównaj fragment Jezero z terenami Atakamy, "
-    "Kotliny Tunkińskiej na Syberii i Kapadocji w Turcji."
+    "Kotliny Tunkińskiej na Syberii, Kapadocji w Turcji i Hanksville w USA."
 )
 
 if not AREAS_FILE.exists() or not METHOD_FILE.exists():
@@ -122,7 +122,7 @@ st.selectbox(
 st.caption(
     "Porównywane fragmenty mają około 11,3 × 11,9 km. "
     "Wyszukiwanie obejmuje przygotowane fragmenty "
-    "Atakamy, Kotliny Tunkińskiej i Kapadocji."
+    "Atakamy, Kotliny Tunkińskiej, Kapadocji i Hanksville."
 )
 
 st.header("2. Wybierz kryteria podobieństwa")
@@ -149,7 +149,7 @@ with st.form("criteria_two_regions"):
         elif column == "material_score":
             checkbox_label += " — rozpoznana część"
         elif column == "water_score":
-            checkbox_label += " — tylko Atakama"
+            checkbox_label += " — Atakama i Hanksville"
 
         with left:
             checked = st.checkbox(
@@ -270,7 +270,7 @@ if results:
 
     if "water_score" in active:
         st.info(
-            "Wyszukiwanie obejmuje tylko Atakamę. "
+            "Wyszukiwanie obejmuje Atakamę i Hanksville. "
             "Syberia i Turcja nie mają przygotowanych danych śladów wody. "
             "Odznacz tę kategorię, aby porównać oba regiony."
         )
@@ -412,14 +412,15 @@ with st.expander("Źródła danych i sposób liczenia"):
     st.write(
         "Obszary Ziemi: przygotowane fragmenty Atakamy, "
         "Kotliny Tunkińskiej (51–52°N, 102–103°E) "
-        "i Kapadocji (38–39°N, 34–35°E). "
+        "Kapadocji (38–39°N, 34–35°E) "
+        "i okolic Hanksville (38–39°N, 111–110°W). "
         "Wzorzec Marsa: wybrany fragment Jezero."
     )
 
     st.write(
         "Rzeźba: model CTX/USGS z danych NASA MRO dla Marsa "
         "oraz Terrain Tiles dla Ziemi. Siatka analizy 100 m. "
-        "Wspólne skale różnic obliczono ze wszystkich trzech regionów Ziemi. "
+        "Wspólne skale różnic obliczono ze wszystkich czterech regionów Ziemi. "
         "Nachylenie, przewyższenia i nierówność mają "
         "wagi wewnętrzne 40/30/30."
     )
@@ -443,8 +444,8 @@ with st.expander("Źródła danych i sposób liczenia"):
     )
 
     st.write(
-        "Ślady wody: dostępne tylko dla Atakamy. "
-        "Źródła: mapa Jezero oraz Geología Base Chile. "
+        "Ślady wody: dostępne dla Atakamy i Hanksville. "
+        "Źródła: mapa Jezero, Geología Base Chile oraz USGS SGMC dla Utah. "
         "Porównanie udziału zmapowanych osadów rzecznych, "
         "aluwialnych i jeziornych. "
         "Indeks = 100 / (1 + różnica udziałów / 0,20). "
@@ -458,4 +459,14 @@ with st.expander("Źródła danych i sposób liczenia"):
         "niezależnie zweryfikowana. Materiał i ślady wody "
         "częściowo opisują te same osady."
     )
-    
+
+    st.write(
+        "Hanksville — interpretacja śladów wody: "
+        "starsze osady aluwialne oraz jednostka Morrison "
+        "obejmująca człony Brushy Basin i Salt Wash. "
+        "Interpretacja dotyczy środowisk powstawania "
+        "jednostek geologicznych, nie każdego piksela osobno. "
+        "Jednostki mieszane pozostają oddzielnie. "
+        "Źródło interpretacji Morrison: Utah Geological Survey, "
+        "GeoSights: Bentonite Hills."
+    )
